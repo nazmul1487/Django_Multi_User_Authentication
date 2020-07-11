@@ -1,0 +1,21 @@
+{%  extends 'base.html' %}
+
+{% block content %}
+
+	<div class="container">
+
+			{% if request.user.is_student %}
+               		 <h1>Welcome Student</h1>
+			{% elif request.user.is_teacher %}
+					  <h1>Welcome Teacher</h1>
+
+			{% else %}
+				<h1> Hello, Admin</h1>
+			{% endif %}
+
+	</div>
+
+
+
+
+{% endblock %}
